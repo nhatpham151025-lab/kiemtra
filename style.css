@@ -1,0 +1,608 @@
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* Cbanner */
+
+.navbar {
+  background-color: #2f68b0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.navbar ul li {
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.navbar ul li:hover {
+  background-color: #37e0e0;
+  border-radius: 5px;
+}
+
+.navbar i {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .partner-section img {
+    height: 50px;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
+}
+
+/* menu */
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* --- Next & previous buttons --- */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+/* --- slide --- */
+** {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #dedede; /* nền ngoài xám nhạt */
+  padding: 40px 0;
+}
+
+.main-wrapper {
+  background: #fff;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2.1fr 0.9fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* ----- Cột trái ----- */
+.news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.news-image {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.news-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.news-image:hover img {
+  transform: scale(1.03);
+}
+
+.text h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ----- Cột phải ----- */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.banner {
+  border: 6px solid red;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.banner:hover {
+  transform: scale(1.02);
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 992px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .banner {
+    width: 48%;
+  }
+}
+/* slide */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #e2e2e2;
+  padding: 40px 0;
+}
+
+.main-wrapper {
+  max-width: 1250px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px 40px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 0.8fr; /* ảnh - chữ - banner */
+  gap: 30px;
+  align-items: start;
+}
+
+/* --- Ảnh bên trái --- */
+.left img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+.left img:hover {
+  transform: scale(1.03);
+}
+
+/* --- Giữa --- */
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.middle h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #111;
+}
+.middle p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* --- Banner bên phải --- */
+.banner {
+  border: 6px solid red;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.banner:hover {
+  transform: scale(1.03);
+}
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .middle {
+    order: 3;
+  }
+  .right {
+    order: 2;
+  }
+}
+
+/* - phần 1 --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background: #dcdcdc;
+  padding: 30px 0;
+}
+.news-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 0.9fr; /* bên trái tin tức, bên phải banner */
+  gap: 30px;
+  background: #f6f6f6;
+  padding: 25px 35px;
+} /* --- Bên trái: danh sách tin tức --- */
+.news-left {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.news-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+.news-item img:hover {
+  transform: scale(1.03);
+}
+.news-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.news-item h3:hover {
+  color: #0066cc;
+  cursor: pointer;
+}
+.news-item p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+} /* --- Bên phải: banner --- */
+.news-right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.banner img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.banner img:hover {
+  transform: scale(1.03);
+} /* --- Responsive cho màn hình nhỏ --- */
+@media (max-width: 992px) {
+  .news-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .news-left {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---xanh --- */
+/* --- Phần multimedia --- */
+.multimedia-section {
+  background: #00436b;
+  color: #fff;
+  padding: 30px 40px;
+  max-width: 1300px;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+
+/* Tiêu đề */
+.multimedia-section .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.multimedia-section h2 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.multimedia-section .arrow {
+  color: #00bfff;
+  margin-right: 8px;
+}
+.multimedia-section .menu span {
+  margin-left: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: color 0.3s;
+}
+.multimedia-section .menu span:hover {
+  color: #00bfff;
+}
+
+/* --- Bố cục video --- */
+.multimedia-section .content {
+  display: grid;
+  grid-template-columns: 2fr 1.1fr;
+  gap: 25px;
+}
+
+/* Video lớn bên trái */
+.main-video .thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.main-video .thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s;
+}
+.main-video .thumb:hover img {
+  transform: scale(1.03);
+}
+.play-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: red;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.play-btn:hover {
+  transform: scale(1.1);
+}
+
+.main-video h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0 10px;
+  line-height: 1.4;
+}
+.main-video p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e3e3e3;
+}
+
+/* Video nhỏ bên phải */
+.side-videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(180px, auto);
+  gap: 20px;
+}
+.side-videos .video-item:nth-child(3) {
+  grid-column: span 2; /* video cuối chạy ngang 2 cột */
+}
+.video-item .thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.video-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.video-item .thumb:hover img {
+  transform: scale(1.05);
+}
+.video-item h4 {
+  font-size: 15px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .multimedia-section .content {
+    grid-template-columns: 1fr;
+  }
+  .side-videos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main-wrapper,
+.news-wrapper,
+.multimedia-section {
+  margin: 0 80px; /* 👈 0 trên/dưới, 20px trái/phải */
+}
+
+/* --- chinh end --- */
+.end {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #003e65;
+  color: #fff;
+}
+
+/* kết */
+footer {
+  background-color: #f5f6f6; /* màu nền xanh đậm */
+  color: #cce172;
+  padding: 25px 60px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Bố cục 3 phần: logo - nội dung - mạng xã hội */
+.footer-container {
+  display: flex;
+  align-items: center; /* căn giữa theo chiều dọc */
+  justify-content: space-between; /* tách 3 phần đều nhau */
+  flex-wrap: nowrap;
+}
+
+/* Logo */
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  max-height: 90px;
+  margin-right: 20px; /* cách chữ bên phải */
+}
+
+/* Nội dung chữ giữa */
+.footer-center {
+  flex: 1;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.footer-center p {
+  margin: 2px 0;
+  color: #238a8a;
+}
+
+.footer-center .footer-title {
+  font-weight: bold;
+  color: #4c43c4;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+/* Mạng xã hội bên phải */
+.footer-right {
+  text-align: right;
+}
+
+.footer-connect {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #245d7a;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #2e798e;
+  font-size: 22px;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #329851;
+  transform: scale(1.15);
+}
+
+/* Responsive: khi thu nhỏ màn hình */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left {
+    justify-content: center;
+  }
+
+  .footer-center {
+    margin: 15px 0;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+}
